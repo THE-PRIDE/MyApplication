@@ -17,6 +17,7 @@ import android.widget.PopupWindow;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.signature.StringSignature;
+import com.meng.myapplication.MyWebView.MyWebViewActivity;
 import com.meng.myapplication.R;
 
 /**
@@ -58,8 +59,12 @@ public class GlideImageTestActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
 //                show(view);//Popwindow
-                Intent intent = new Intent(GlideImageTestActivity.this,ImageViewActivity.class);
-                String url = "http://28.5.2.72:8080/NMBFOServer/201.png";
+//                Intent intent = new Intent(GlideImageTestActivity.this,ImageViewActivity.class);
+//                String url = "http://202.108.57.41/ebank/docs/arpic/201808131402213.png";
+//                intent.putExtra("URL",url);
+
+                Intent intent = new Intent(GlideImageTestActivity.this,MyWebViewActivity.class);
+                String url = "https://www.baidu.com";
                 intent.putExtra("URL",url);
                 startActivity(intent);
             }
@@ -67,7 +72,7 @@ public class GlideImageTestActivity extends AppCompatActivity{
         BtnGlideTest2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "http://28.5.2.72:8080/NMBFOServer/20181.png";
+                String url = "http://202.108.57.41/ebank/docs/arpic/201808131402210.png";
                 Intent intent = new Intent(GlideImageTestActivity.this,ImageViewActivity.class);
                 intent.putExtra("URL",url);
                 startActivity(intent);

@@ -63,7 +63,7 @@ public class IOUtil {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
         StringBuffer sb = new StringBuffer("");
-        String b = "";
+        String b;
 
         try {
             while ((b = br.readLine()) != null){

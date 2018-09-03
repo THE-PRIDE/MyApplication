@@ -49,18 +49,6 @@ public class ImageViewActivity extends AppCompatActivity {
                 Toast.makeText(ImageViewActivity.this,"success",Toast.LENGTH_SHORT).show();
                 return false;
             }
-        }).cacheDecoder(new ResourceDecoder<File, GifBitmapWrapper>() {
-            @Override
-            public Resource<GifBitmapWrapper> decode(File source, int width, int height) throws IOException {
-                Log.e("source",source.toString());
-                return null;
-            }
-
-            @Override
-            public String getId() {
-                return null;
-            }
-        })
-                .into(mImgGlideView);
+        }).into(mImgGlideView);
     }
 }
